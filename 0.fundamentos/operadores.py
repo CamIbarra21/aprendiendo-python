@@ -13,9 +13,14 @@ print(f'Mod > {n1 % n2}')
 print("Pote >", (n1**2))
 
 print("")
-print("")
+print("***")
 print("")
 
 print("= = = LIBRERIA MATH = = =")
 n3 = float(input('Ingrese un numero: '))
-print(f'Raiz de {n3} = {math.sqrt(n3)}')
+raiz = math.sqrt(n3)
+print(f'Raiz de {n3} = {raiz}')
+
+#Separar parte entera y decimal de la raiz calculada
+print(f'Parte entera --> {round(raiz)}')
+print(f'Parte decimal --> {raiz - round(raiz)}')
