@@ -31,7 +31,7 @@ print("")
 for i in range(rango_min, rango_max, salto):
     print(f'Prueba con salto {i}')
 
-#WHILE
+# W H I L E
 """
 Es una estructura repetitiva que requiere de una condicional para detenerse
 """
