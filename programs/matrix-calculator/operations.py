@@ -11,8 +11,8 @@ def addition(matrixA, matrixB):
 
         for i in range(rows):
             for j in range(columns):
-                suma = matrixA[i][j] + matrixB[i][j]
-                newMatrix[i][j] = suma
+                result = matrixA[i][j] + matrixB[i][j]
+                newMatrix[i][j] = result
 
     else:
         newMatrix = [[0]]
@@ -32,8 +32,34 @@ def subtraction(matrixA, matrixB):
 
         for i in range(rows):
             for j in range(columns):
-                suma = matrixA[i][j] + matrixB[i][j]
-                newMatrix[i][j] = suma
+                result = matrixA[i][j] - matrixB[i][j]
+                newMatrix[i][j] = result
+
+    else:
+        newMatrix = [[0]]
+
+    return newMatrix
+
+def multiplication(matrixA, matrixB):
+    newMatrix = []
+
+    if len(matrixA[0]) == len(matrixB):
+        #  las filas son iguales     y      las columnas son iguales
+        factor = len(matrixA[0])
+        rows = len(matrixA)
+        columns = len(matrixB[0])
+
+        #print(f'Filas = {rows}\nColumnas: {columns}')
+
+        for i in range(rows):
+            newMatrix.append([0] * columns)
+
+        for i in range(rows):
+            for j in range(columns):
+                result = 0
+                for k in range(factor):
+                    result += (matrixA[i][k] * matrixB[k][j])
+                newMatrix[i][j] = result
 
     else:
         newMatrix = [[0]]
