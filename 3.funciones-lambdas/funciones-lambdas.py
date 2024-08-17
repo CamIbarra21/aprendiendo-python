@@ -54,7 +54,6 @@ potenciaLambda = lambda a,b: (pow(a,b))
 
 n1 = int(input('Ingrese un numero: '))
 n2 = int(input('Ingrese otro numero: '))
-n3,n4,n5 = int(input('n3: '), input('n4: '), input('n5: '))
 print(f"\nSuma: {sumaLambda(n1,n2)}"
       f"\nResta: {resta(n1,n2)}"
       f"\nMultiplicación: {multiplicacionLambda(n1,n2)}"
