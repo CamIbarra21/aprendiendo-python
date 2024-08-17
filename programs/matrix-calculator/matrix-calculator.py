@@ -8,8 +8,10 @@ matrizB = [[9, 8, 7, 6],
            [5, 4, 3, 2],
            [5, 4, 3, 2]]
 
+validMatrix = lambda matrix: (len(matrix) > 1 and len(matrix[0]) > 1)
+
 matrizResultado = addition(matrizA, matrizB)
-if len(matrizResultado) > 1 and len(matrizResultado[0]) > 1:
+if validMatrix(matrizResultado):
     print("\nEl resultado es: ", matrizResultado)
 else:
     print('Suma no valida')
