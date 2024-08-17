@@ -65,3 +65,8 @@ def multiplication(matrixA, matrixB):
         newMatrix = [[0]]
 
     return newMatrix
+
+def determinant(matrix):
+    result = 0
+
+#transpose
