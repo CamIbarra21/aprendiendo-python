@@ -67,6 +67,42 @@ def multiplication(matrixA, matrixB):
     return newMatrix
 
 def determinant(matrix):
-    result = 0
+    rows = len(matrix)
+    columns = len(matrix[0])
+    if rows != columns:
+        return 'ERROR'
+
+    if rows < 2:
+        return 0
+    
+    if rows == 2:
+        det = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+        return det
+    
+    factor = 1
+    result = 0 
+
+    for j in range(columns):
+        coefficient = matrix[0][j]
+
+        newMatrix = []
+        for i in range(rows - 1):
+            newMatrix.append([0] * (columns - 1))
+        #print(newMatrix)
+
+        rowNM = 0
+        for i in range(1, rows):
+            columNM = 0
+            for k in range(columns):
+                if k != j:
+                    #print(f'R:{rowNM}   C:{columNM}')
+                    newMatrix[rowNM][columNM] = matrix[i][k]
+                    columNM += 1
+            rowNM += 1
+
+        result += (factor * coefficient * determinant(newMatrix))
+        factor *= -1
+            
+    return result
 
 #transpose
