@@ -69,6 +69,7 @@ def multiplication(matrixA, matrixB):
 def determinant(matrix):
     rows = len(matrix)
     columns = len(matrix[0])
+
     if rows != columns:
         return 'ERROR'
 
@@ -105,4 +106,25 @@ def determinant(matrix):
             
     return result
 
-#transpose
+def transpose(matrix):
+    rows = len(matrix)
+    columns = len(matrix[0])
+
+    newMatrix = []
+    for i in range(columns):
+        newMatrix.append([0] * rows)
+
+    for i in range(rows):
+        for j in range(columns):
+            newMatrix[j][i] = matrix[i][j]
+    
+    return newMatrix
+
+def inverse(matrix):
+    rows = len(matrix)
+    columns = len(matrix[0])
+
+    newMatrix = []
+    for i in range(rows):
+        newMatrix.append([0] * columns)
+    

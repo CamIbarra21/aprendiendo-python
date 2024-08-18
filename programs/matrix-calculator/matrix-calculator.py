@@ -20,6 +20,7 @@ if validMatrix(matrizResultado):
     printMatrix(matrizResultado)
 else:
     print('Suma no valida')
+print("")
 
 matrizResultado = multiplication(matrizA, matrizB)
 printMatrix(matrizResultado)
@@ -31,3 +32,6 @@ if determinante == 'ERROR':
     print('No es posible calcular la determinante de esta matriz')
 else:
     print('La determinante de la matriz es ', determinante)
+
+matrizResultado = transpose(matrizB)
+printMatrix(matrizResultado)
