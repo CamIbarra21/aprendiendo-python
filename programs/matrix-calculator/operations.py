@@ -44,7 +44,7 @@ def multiplication(matrixA, matrixB):
     newMatrix = []
 
     if len(matrixA[0]) == len(matrixB):
-        #  las filas son iguales     y      las columnas son iguales
+        #  columnas de la matriz A = filas de la matriz B
         factor = len(matrixA[0])
         rows = len(matrixA)
         columns = len(matrixB[0])
@@ -120,7 +120,7 @@ def transpose(matrix):
     
     return newMatrix
 
-def inverse(matrix):
+def inverse(matrix): #Todavia en proceso
     rows = len(matrix)
     columns = len(matrix[0])
 
